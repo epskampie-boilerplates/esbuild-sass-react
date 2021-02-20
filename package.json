@@ -1,17 +1,17 @@
 {
   "name": "duodraw",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm-run-all -p sass:watch esbuild:watch",
+    "golivereload": "cd public; golivereload",
+    "sass:watch": "sass src/index.scss public/compiled/index.css --source-map --watch",
+    "esbuild:watch": "./build.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "esbuild": "^0.8.49",
-    "prettier": "^2.2.1"
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.2.1",
+    "sass": "^1.32.8"
   },
   "dependencies": {
     "esbuild-plugin-sass": "^0.3.3"

@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const esbuild = require('esbuild');
 const sassPlugin = require('esbuild-plugin-sass');
 
